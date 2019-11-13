@@ -6,78 +6,76 @@ USE management;
 
 -- START CREATE TABLES
 CREATE TABLE departments (
-  dept_no INT(4) PRIMARY KEY AUTO_INCREMENT,
+  dept_no INT PRIMARY KEY AUTO_INCREMENT,
   dept_name VARCHAR(32) NOT NULL,
   budget INT
 );
 CREATE TABLE executives (
-  emp_no INT(8) PRIMARY KEY AUTO_INCREMENT,
+  emp_no INT PRIMARY KEY AUTO_INCREMENT,
   emp_name VARCHAR(10) NOT NULL,
   ssn CHAR(14) NOT NULL,
   final_edu VARCHAR(100) NOT NULL,
   enter_date DATE NOT NULL,
-  dept_no INT(4) NOT NULL,
+  dept_no INT NOT NULL,
   position ENUM('Chief', 'Executives', 'Staff') NOT NULL,
   FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 CREATE TABLE non_dev_employees (
-  emp_no INT(8) PRIMARY KEY AUTO_INCREMENT,
+  emp_no INT PRIMARY KEY AUTO_INCREMENT,
   emp_name VARCHAR(10) NOT NULL,
   ssn CHAR(14) NOT NULL,
   final_edu VARCHAR(100) NOT NULL,
   enter_date DATE NOT NULL,
-  dept_no INT(4) NOT NULL,
+  dept_no INT NOT NULL,
   FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 CREATE TABLE dev_employees (
-  emp_no INT(8) PRIMARY KEY AUTO_INCREMENT,
+  emp_no INT PRIMARY KEY AUTO_INCREMENT,
   emp_name VARCHAR(10) NOT NULL,
   ssn CHAR(14) NOT NULL,
   final_edu VARCHAR(100) NOT NULL,
   enter_date DATE NOT NULL,
-  dept_no INT(4) NOT NULL,
-  tech_grade INT(2) NOT NULL,
+  dept_no INT NOT NULL,
+  tech_grade INT NOT NULL,
   FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 CREATE TABLE clients (
-  cli_id INT(4) PRIMARY KEY AUTO_INCREMENT,
+  cli_id INT PRIMARY KEY AUTO_INCREMENT,
   cli_name_ko VARCHAR(32) NOT NULL,
   cli_name_en VARCHAR(32),
   representative VARCHAR(10) NOT NULL,
   handsel INT
 );
 CREATE TABLE projects (
-  proj_no INT(8) PRIMARY KEY AUTO_INCREMENT,
+  proj_no INT PRIMARY KEY AUTO_INCREMENT,
   proj_name VARCHAR(48),
   start_date DATE NOT NULL,
   end_date DATE NOT NULL,
   status DATE COMMENT 'This attribute is actual end date. Null if project is developing status.',
-  cli_id INT(4) NOT NULL,
+  cli_id INT NOT NULL,
   FOREIGN KEY (cli_id) REFERENCES clients(cli_id)
 );
 CREATE TABLE team_members (
-  member_id INT(8) PRIMARY KEY AUTO_INCREMENT,
-  proj_no INT(8),
-  emp_no INT(8),
+  member_id INT PRIMARY KEY AUTO_INCREMENT,
+  proj_no INT,
+  emp_no INT,
   role ENUM('PM', 'PL', 'Analyst', 'Designer', 'Programmer', 'Tester'),
   join_date DATE NOT NULL,
   out_date DATE,
   UNIQUE (proj_no, emp_no, role),
   FOREIGN KEY (proj_no) REFERENCES projects(proj_no),
-  FOREIGN KEY (emp_no) REFERENCES dev_employees(emp_no),
-  INDEX idx1 (emp_no),
-  INDEX idx2 (role)
+  FOREIGN KEY (emp_no) REFERENCES dev_employees(emp_no)
 );
 CREATE TABLE colleage_evaluations (
-  eval_id INT(8) PRIMARY KEY,
-  proj_no INT(8) NOT NULL,
-  to_emp_no INT(8) NOT NULL,
+  eval_id INT PRIMARY KEY,
+  proj_no INT NOT NULL,
+  to_emp_no INT NOT NULL,
   to_role ENUM('PM', 'PL', 'Analyst', 'Designer', 'Programmer', 'Tester') NOT NULL,
-  from_emp_no INT(8) NOT NULL,
+  from_emp_no INT NOT NULL,
   from_role ENUM('PM', 'PL', 'Analyst', 'Designer', 'Programmer', 'Tester') NOT NULL,
-  performence_rating INT(2) NOT NULL,
+  performence_rating INT NOT NULL,
   performence_desc VARCHAR(1000) NOT NULL,
-  communication_rating INT(2) NOT NULL,
+  communication_rating INT NOT NULL,
   communication_desc VARCHAR(1000) NOT NULL,
   completed BOOLEAN NOT NULL,
   FOREIGN KEY (proj_no) REFERENCES team_members(proj_no),
@@ -87,20 +85,20 @@ CREATE TABLE colleage_evaluations (
   FOREIGN KEY (from_role) REFERENCES team_members(role)
 );
 CREATE TABLE client_evaluations (
-  eval_id INT(8) PRIMARY KEY,
-  proj_no INT(8) NOT NULL,
-  to_emp_no INT(8) NOT NULL,
+  eval_id INT PRIMARY KEY,
+  proj_no INT NOT NULL,
+  to_emp_no INT NOT NULL,
   to_role ENUM('PM', 'PL', 'Analyst', 'Designer', 'Programmer', 'Tester') NOT NULL,
   from_client VARCHAR(32),
-  performence_rating INT(2) NOT NULL,
+  performence_rating INT NOT NULL,
   performence_desc VARCHAR(1000) NOT NULL,
-  communication_rating INT(2) NOT NULL,
+  communication_rating INT NOT NULL,
   communication_desc VARCHAR(1000) NOT NULL,
   completed BOOLEAN NOT NULL,
   FOREIGN KEY (proj_no) REFERENCES team_members(proj_no),
   FOREIGN KEY (to_emp_no) REFERENCES team_members(emp_no),
   FOREIGN KEY (to_role) REFERENCES team_members(role),
-  FOREIGN KEY (from_client) REFERENCES clients(cli_id)
+  FOREIGN KEY (from_client) REFERENCES projects(cli_id)
 );
 -- END CREATE TABLES
 
