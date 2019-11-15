@@ -1,6 +1,6 @@
 import express from 'express'
 
-import employee from '../models/employee'
+import management from '../models/management'
 
 const router = express.Router()
 
@@ -9,10 +9,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' })
 })
 
-router.get('/api/employees', (req, res, next) => {
-  employee.query('SELECT * FROM employee', (error, results, fields) => {
-    if (error) throw error
-    res.send(results)
+router.get('/api/executives', (req, res, next) => {
+  management.query('SELECT * FROM executives', (err, result, fields) => {
+    if (err) throw err
+    res.send(result)
   })
 })
 
