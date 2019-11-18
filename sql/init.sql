@@ -10,33 +10,15 @@ CREATE TABLE departments (
   dept_name VARCHAR(32) NOT NULL,
   budget INT
 );
-CREATE TABLE executives (
+CREATE TABLE employees (
   emp_no INT PRIMARY KEY AUTO_INCREMENT,
   emp_name VARCHAR(10) NOT NULL,
+  account_id VARCHAR(32),
+  account_pw VARCHAR(100),
   ssn CHAR(14) NOT NULL,
   final_edu VARCHAR(100) NOT NULL,
   enter_date DATE NOT NULL,
   dept_no INT NOT NULL,
-  position ENUM('Chief', 'Executives', 'Staff') NOT NULL,
-  FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
-);
-CREATE TABLE non_dev_employees (
-  emp_no INT PRIMARY KEY AUTO_INCREMENT,
-  emp_name VARCHAR(10) NOT NULL,
-  ssn CHAR(14) NOT NULL,
-  final_edu VARCHAR(100) NOT NULL,
-  enter_date DATE NOT NULL,
-  dept_no INT NOT NULL,
-  FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
-);
-CREATE TABLE dev_employees (
-  emp_no INT PRIMARY KEY AUTO_INCREMENT,
-  emp_name VARCHAR(10) NOT NULL,
-  ssn CHAR(14) NOT NULL,
-  final_edu VARCHAR(100) NOT NULL,
-  enter_date DATE NOT NULL,
-  dept_no INT NOT NULL,
-  tech_grade INT NOT NULL,
   FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 CREATE TABLE clients (
@@ -64,7 +46,7 @@ CREATE TABLE team_members (
   out_date DATE,
   UNIQUE (proj_no, emp_no, role),
   FOREIGN KEY (proj_no) REFERENCES projects(proj_no),
-  FOREIGN KEY (emp_no) REFERENCES dev_employees(emp_no)
+  FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 CREATE TABLE colleague_evaluations (
   eval_id INT PRIMARY KEY AUTO_INCREMENT,
