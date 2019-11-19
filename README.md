@@ -9,11 +9,13 @@
 - [x] See department detail info
 - [x] Modify department info
 - [x] Delete department
-- [ ] Hire employee (executive, non_dev, dev)
+- [ ] Hire employee
 - [ ] See all employee
 - [ ] See specific employee
 - [ ] Modify employee info
 - [ ] Delete employee
+- [ ] Connect executives employees to executives_position
+- [ ] Connect developer employees to developer_grade
 - [ ] Add new client
 - [ ] Add new project
 - [ ] Allocate team members to project

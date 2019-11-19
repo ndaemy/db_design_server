@@ -21,6 +21,16 @@ CREATE TABLE employees (
   dept_no INT NOT NULL,
   FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
+CREATE TABLE executives_position (
+  emp_no INT PRIMARY KEY,
+  position ENUM('Chief', 'Executives', 'Staff'),
+  FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
+);
+CREATE TABLE developer_grade (
+  emp_no INT PRIMARY KEY,
+  tech_grade ENUM('Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Master', 'Chanllenger'),
+  FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
+)
 CREATE TABLE clients (
   cli_id INT PRIMARY KEY AUTO_INCREMENT,
   cli_name_ko VARCHAR(32) NOT NULL,
