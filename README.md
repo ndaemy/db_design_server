@@ -7,7 +7,7 @@
 - [x] Create department
 - [x] See all department list
 - [x] See department detail info
-- [ ] Modify department info
+- [x] Modify department info
 - [x] Delete department
 - [ ] Hire employee (executive, non_dev, dev)
 - [ ] See all employee
@@ -26,5 +26,6 @@
 
 - GET /api/departments
 - POST /api/departments
+- PUT /api/departments
 - GET /api/departments/:dept_no
 - DELETE /api/departments/:dept_no
