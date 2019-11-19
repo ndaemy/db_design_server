@@ -30,13 +30,24 @@ router.get('/departments/new', (req, res, next) => {
 
 router.get('/departments/:dept_no', (req, res, next) => {
   const { dept_no } = req.params
-  console.log(dept_no)
   management.query(
     'SELECT * FROM departments WHERE dept_no=?',
     [dept_no],
     (err, results, fields) => {
       if (err) throw err
       res.send(results)
+    }
+  )
+})
+
+router.delete('/departments/:dept_no', (req, res, next) => {
+  const { dept_no } = req.params
+  management.query(
+    'DELETE FROM departments WHERE dept_no=?',
+    [dept_no],
+    (err, results, fields) => {
+      if (err) throw err
+      res.redirect('/api/departments')
     }
   )
 })

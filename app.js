@@ -3,6 +3,7 @@ import express from 'express'
 import path from 'path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
+import methodOverride from 'method-override'
 
 import indexRouter from './routes/index'
 import departmentRouter from './routes/api/departments'
@@ -19,6 +20,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(methodOverride('_method', { methods: ['POST', 'GET'] }))
 
 app.use('/', indexRouter)
 app.use('/api/', departmentRouter)
