@@ -9,8 +9,8 @@
 - [x] See department detail info
 - [x] Modify department info
 - [x] Delete department
-- [ ] Hire employee
-- [ ] See all employee
+- [x] Hire employee
+- [x] See all employee
 - [ ] See specific employee
 - [ ] Modify employee info
 - [ ] Delete employee
@@ -31,3 +31,8 @@
 - PUT /api/departments
 - GET /api/departments/:dept_no
 - DELETE /api/departments/:dept_no
+
+### employees
+
+- GET /api/employees
+- POST /api/employees
