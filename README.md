@@ -4,8 +4,8 @@
 
 ## User Stories
 
-- [ ] Create department
-- [ ] See all department list
+- [x] Create department
+- [x] See all department list
 - [ ] See department detail info
 - [ ] Modify department info
 - [ ] Delete department
@@ -19,3 +19,10 @@
 - [ ] Allocate team members to project
 - [ ] Add evaluation
 - [ ] Modify evaluation
+
+## API Lists
+
+### departments
+
+- GET /api/departments
+- POST /api/departments

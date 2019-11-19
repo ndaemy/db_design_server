@@ -1,10 +1,10 @@
 import express from 'express'
 
-import management from '../models/management'
+import management from '../../models/management'
 
 const router = express.Router()
 
-router.get('/api/employees', (req, res, next) => {
+router.get('/employees', (req, res, next) => {
   management.query('SELECT * FROM employees', (err, results, fields) => {
     if (err) throw err
     res.send(results)
