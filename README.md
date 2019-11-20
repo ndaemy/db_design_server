@@ -12,7 +12,7 @@
 - [x] Hire employee
 - [x] See all employee
 - [x] See specific employee
-- [ ] Modify employee info
+- [x] Modify employee info
 - [x] Delete employee
 - [ ] Connect executives employees to executives_position
 - [ ] Connect developer employees to developer_grade
@@ -36,5 +36,6 @@
 
 - GET /api/employees
 - POST /api/employees
+- PUT /api/employees
 - GET /api/employees/:emp_no
 - DELETE /api/employees/:emp_no

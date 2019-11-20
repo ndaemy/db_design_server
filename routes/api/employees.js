@@ -24,8 +24,26 @@ router.post('/employees', (req, res, next) => {
   )
 })
 
+router.put('/employees', (req, res, next) => {
+  const { emp_no, emp_name, ssn, final_edu, enter_date, dept_no } = req.body
+  management.query(
+    'UPDATE employees SET emp_name=?, ssn=?, final_edu=?, enter_date=?, dept_no=? WHERE emp_no=?',
+    [emp_name, ssn, final_edu, enter_date, dept_no, emp_no],
+    (err, results, fields) => {
+      if (err) throw err
+      res.redirect('/api/employees')
+    }
+  )
+})
+
+// TODO: This is example input page. Need to remove later.
 router.get('/employees/new', (req, res, next) => {
   res.render('employees/new')
+})
+
+// TODO: This is example input page. Need to remove later.
+router.get('/employees/edit', (req, res, next) => {
+  res.render('employees/edit')
 })
 
 router.get('/employees/:emp_no', (req, res, next) => {
