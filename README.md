@@ -13,7 +13,7 @@
 - [x] See all employee
 - [x] See specific employee
 - [ ] Modify employee info
-- [ ] Delete employee
+- [x] Delete employee
 - [ ] Connect executives employees to executives_position
 - [ ] Connect developer employees to developer_grade
 - [ ] Add new client
@@ -37,3 +37,4 @@
 - GET /api/employees
 - POST /api/employees
 - GET /api/employees/:emp_no
+- DELETE /api/employees/:emp_no

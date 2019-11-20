@@ -40,4 +40,16 @@ router.get('/employees/:emp_no', (req, res, next) => {
   )
 })
 
+router.delete('/employees/:emp_no', (req, res, next) => {
+  const { emp_no } = req.params
+  management.query(
+    'DELETE FROM employees WHERE emp_no=?',
+    [emp_no],
+    (err, results, fields) => {
+      if (err) throw err
+      res.redirect('/api/employees')
+    }
+  )
+})
+
 export default router
