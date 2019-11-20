@@ -28,7 +28,7 @@ CREATE TABLE executives_position (
 );
 CREATE TABLE developer_grade (
   emp_no INT PRIMARY KEY,
-  tech_grade ENUM('Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Master', 'Chanllenger'),
+  tech_grade ENUM('Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond'),
   FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 CREATE TABLE clients (
