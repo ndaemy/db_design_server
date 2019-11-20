@@ -28,4 +28,16 @@ router.get('/employees/new', (req, res, next) => {
   res.render('employees/new')
 })
 
+router.get('/employees/:emp_no', (req, res, next) => {
+  const { emp_no } = req.params
+  management.query(
+    'SELECT * FROM employees WHERE emp_no=?',
+    [emp_no],
+    (err, results, fields) => {
+      if (err) throw err
+      res.send(results)
+    }
+  )
+})
+
 export default router

@@ -11,7 +11,7 @@
 - [x] Delete department
 - [x] Hire employee
 - [x] See all employee
-- [ ] See specific employee
+- [x] See specific employee
 - [ ] Modify employee info
 - [ ] Delete employee
 - [ ] Connect executives employees to executives_position
@@ -36,3 +36,4 @@
 
 - GET /api/employees
 - POST /api/employees
+- GET /api/employees/:emp_no
