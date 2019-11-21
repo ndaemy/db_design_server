@@ -35,16 +35,6 @@ router.put('/departments', (req, res, next) => {
   )
 })
 
-// TODO: This is example input page. Need to remove later.
-router.get('/departments/new', (req, res, next) => {
-  res.render('departments/new')
-})
-
-// TODO: This is example input page. Need to remove later.
-router.get('/departments/edit', (req, res, next) => {
-  res.render('departments/edit')
-})
-
 router.get('/departments/:dept_no', (req, res, next) => {
   const { dept_no } = req.params
   management.query(
