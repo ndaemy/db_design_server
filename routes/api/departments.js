@@ -4,14 +4,14 @@ import management from '../../models/management'
 
 const router = express.Router()
 
-router.get('/departments', (req, res, next) => {
+router.get('/', (req, res, next) => {
   management.query('SELECT * FROM departments', (err, results, fields) => {
     if (err) throw err
     res.send(results)
   })
 })
 
-router.post('/departments', (req, res, next) => {
+router.post('/', (req, res, next) => {
   const { dept_name, budget } = req.body
   management.query(
     'INSERT INTO departments (dept_name, budget) VALUES (?, ?)',
@@ -23,7 +23,7 @@ router.post('/departments', (req, res, next) => {
   )
 })
 
-router.put('/departments', (req, res, next) => {
+router.put('/', (req, res, next) => {
   const { dept_no, dept_name, budget } = req.body
   management.query(
     'UPDATE departments SET dept_name=?, budget=? WHERE dept_no=?',
@@ -35,7 +35,7 @@ router.put('/departments', (req, res, next) => {
   )
 })
 
-router.get('/departments/:dept_no', (req, res, next) => {
+router.get('/:dept_no', (req, res, next) => {
   const { dept_no } = req.params
   management.query(
     'SELECT * FROM departments WHERE dept_no=?',
@@ -47,7 +47,7 @@ router.get('/departments/:dept_no', (req, res, next) => {
   )
 })
 
-router.delete('/departments/:dept_no', (req, res, next) => {
+router.delete('/:dept_no', (req, res, next) => {
   const { dept_no } = req.params
   management.query(
     'DELETE FROM departments WHERE dept_no=?',
