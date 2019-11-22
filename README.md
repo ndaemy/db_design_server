@@ -17,6 +17,7 @@
 - [ ] Connect executives employees to executives_position
 - [ ] Connect developer employees to developer_grade
 - [ ] Add new client
+- [x] See all client list
 - [ ] Add new project
 - [ ] Allocate team members to project
 - [ ] Add evaluation
@@ -39,3 +40,8 @@
 - PUT /api/employees
 - GET /api/employees/:emp_no
 - DELETE /api/employees/:emp_no
+
+### clients
+
+- GET /api/clients
+- POST /api/clients

@@ -8,6 +8,7 @@ import methodOverride from 'method-override'
 import indexRouter from './routes/index'
 import departmentRouter from './routes/api/departments'
 import employeeRouter from './routes/api/employees'
+import clientRouter from './routes/api/clients'
 
 const app = express()
 
@@ -25,6 +26,7 @@ app.use(methodOverride('_method', { methods: ['POST', 'GET'] }))
 app.use('/', indexRouter)
 app.use('/api/departments/', departmentRouter)
 app.use('/api/employees/', employeeRouter)
+app.use('/api/clients/', clientRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
