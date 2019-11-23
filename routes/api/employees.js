@@ -36,6 +36,28 @@ router.put('/', (req, res, next) => {
   )
 })
 
+router.get('/exec_pos', (req, res, next) => {
+  management.query(
+    'SELECT * FROM executives_position',
+    (err, results, fields) => {
+      if (err) throw err
+      res.send(results)
+    }
+  )
+})
+
+router.post('/exec_pos', (req, res, next) => {
+  const { emp_no, position } = req.body
+  management.query(
+    'INSERT INTO executives_position (emp_no, position) VALUES (?, ?)',
+    [emp_no, position],
+    (err, results, fields) => {
+      if (err) throw err
+      res.redirect('/api/employees/exec_pos')
+    }
+  )
+})
+
 router.get('/:emp_no', (req, res, next) => {
   const { emp_no } = req.params
   management.query(
