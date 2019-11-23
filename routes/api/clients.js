@@ -23,4 +23,16 @@ router.post('/', (req, res, next) => {
   )
 })
 
+router.get('/:cli_id', (req, res, next) => {
+  const { cli_id } = req.params
+  management.query(
+    'SELECT * FROM clients WHERE cli_id=?',
+    [cli_id],
+    (err, results, fields) => {
+      if (err) throw err
+      res.send(results)
+    }
+  )
+})
+
 export default router

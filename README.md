@@ -18,6 +18,7 @@
 - [ ] Connect developer employees to developer_grade
 - [ ] Add new client
 - [x] See all client list
+- [x] See specific client
 - [ ] Add new project
 - [ ] Allocate team members to project
 - [ ] Add evaluation
@@ -45,3 +46,4 @@
 
 - GET /api/clients
 - POST /api/clients
+- GET /api/clients/:cli_id
