@@ -18,7 +18,7 @@ router.post('/', (req, res, next) => {
     [proj_name, start_date, end_date, cli_id],
     (err, results, fields) => {
       if (err) throw err
-      res.redirect('/api/projects')
+      res.send(results)
     }
   )
 })

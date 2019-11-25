@@ -18,7 +18,7 @@ router.post('/', (req, res, next) => {
     [cli_name_ko, cli_name_en, representative, handsel],
     (err, results, fields) => {
       if (err) throw err
-      res.redirect('/api/clients')
+      res.send(results)
     }
   )
 })

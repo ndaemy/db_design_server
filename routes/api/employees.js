@@ -19,7 +19,7 @@ router.post('/', (req, res, next) => {
     (err, results, fields) => {
       // TODO: error handling need to be improved
       if (err) throw err
-      res.redirect('/api/employees')
+      res.send(results)
     }
   )
 })
@@ -31,7 +31,7 @@ router.put('/', (req, res, next) => {
     [emp_name, ssn, final_edu, enter_date, dept_no, emp_no],
     (err, results, fields) => {
       if (err) throw err
-      res.redirect('/api/employees')
+      res.send(results)
     }
   )
 })
@@ -53,7 +53,7 @@ router.post('/exec_pos', (req, res, next) => {
     [emp_no, position],
     (err, results, fields) => {
       if (err) throw err
-      res.redirect('/api/employees/exec_pos')
+      res.send(results)
     }
   )
 })
@@ -77,7 +77,7 @@ router.delete('/:emp_no', (req, res, next) => {
     [emp_no],
     (err, results, fields) => {
       if (err) throw err
-      res.redirect('/api/employees')
+      res.send(results)
     }
   )
 })

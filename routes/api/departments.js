@@ -18,7 +18,7 @@ router.post('/', (req, res, next) => {
     [dept_name, budget],
     (err, results, fields) => {
       if (err) throw err
-      res.redirect('/api/departments')
+      res.send(results)
     }
   )
 })
@@ -30,7 +30,7 @@ router.put('/', (req, res, next) => {
     [dept_name, budget, dept_no],
     (err, results, fields) => {
       if (err) throw err
-      res.redirect('/api/departments')
+      res.send(results)
     }
   )
 })
