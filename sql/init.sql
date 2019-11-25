@@ -35,7 +35,7 @@ CREATE TABLE clients (
   cli_id INT PRIMARY KEY AUTO_INCREMENT,
   cli_name_ko VARCHAR(32) UNIQUE NOT NULL,
   cli_name_en VARCHAR(32) UNIQUE,
-  representative VARCHAR(10) NOT NULL,
+  representative VARCHAR(20) NOT NULL,
   handsel INT
 );
 CREATE TABLE projects (

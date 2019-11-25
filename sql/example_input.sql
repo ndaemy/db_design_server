@@ -126,84 +126,126 @@ INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041921, 'Bronze');
 INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041922, 'Bronze');
 INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041923, 'Bronze');
 INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041924, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041925, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041926, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041927, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041928, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041929, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041930, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041931, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041932, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041933, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041934, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041935, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041936, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041937, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041938, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041939, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041940, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041941, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041942, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041943, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041944, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041945, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041946, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041947, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041948, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041949, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041950, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041951, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041952, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041953, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041954, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041955, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041956, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041957, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041958, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041959, 'Bronze');
-INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041960, 'Bronze');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041925, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041926, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041927, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041928, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041929, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041930, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041931, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041932, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041933, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041934, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041935, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041936, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041937, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041938, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041939, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041940, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041941, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041942, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041943, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041944, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041945, 'Silver');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041946, 'Gold');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041947, 'Gold');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041948, 'Gold');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041949, 'Gold');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041950, 'Gold');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041951, 'Gold');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041952, 'Gold');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041953, 'Gold');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041954, 'Platinum');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041955, 'Platinum');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041956, 'Platinum');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041957, 'Diamond');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041958, 'Diamond');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041959, 'Diamond');
+INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041960, 'Diamond');
+
+-- client to have contracted with
+INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('케이엠에어', 'KMAir', '최완규');
+INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('글러브엔터테인먼트', 'Glove Ent.', '김기석');
+INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('애플', 'Apple', 'Tim Cook');
+INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('삼성전자', 'Samsung Electronics.', '김기남');
+INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('엘지전자', 'LG Electronics', '조성진');
+INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('구글', 'Google', 'Sundar Pichai');
+INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('명지대학교', 'Myongji Univ.', '유병진');
 
 -- Receive order from new client
-INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('케이엠에어', 'KMAir', '최완규');
-INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192001, 'KMAir 브랜드 사이트 Launching', '2019-09-11', '2020-02-10', 1);
-INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('애플', 'Apple', 'Tim Cook');
-INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192002, 'AirPods Pro 가지고싶다', '2019-09-12', '2019-10-11', 2);
-INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192003, 'MacBook Pro 16인치도 가지고싶다', '2019-10-12', '2019-11-11', 2);
-INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('글러브엔터테인먼트', 'Glove Ent.', '김기석');
-INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192004, '박효신 8집 빨리', '2019-11-16', '2020-01-01', 3);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192001, 'KMAir 브랜드 사이트 Launching', '2019-10-01', '2020-02-10', 1);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, status, cli_id) VALUES (20192002, 'AirPods Pro 가지고싶다', '2019-10-03', '2019-10-11', '2019-10-11', 2);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192003, 'MacBook Pro 16인치도 가지고싶다', '2019-10-05', '2019-11-11', 2);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192004, '박효신 8집 빨리', '2019-10-11', '2020-01-01', 3);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192005, '삼성전자 인턴쉽 프로젝트', '2019-10-13', '2020-03-31', 4);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192006, '삼성전자 시니어 프로젝트', '2019-10-15', '2020-01-31', 4);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192007, '흥하라 엘지', '2019-10-21', '2020-01-01', 5);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192008, '재밌는 구글', '2019-10-23', '2020-01-01', 6);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192009, '픽셀폰 소개 페이지', '2019-10-25', '2020-02-10', 6);
+INSERT INTO projects (proj_no, proj_name, start_date, end_date, cli_id) VALUES (20192010, '웹페이지 리모델링', '2019-10-27', '2019-12-31', 7); 
+
 
 -- Allocate engineers to order
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041901, 'PM', '2019-09-11');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041902, 'PL', '2019-09-11');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041903, 'Analyst', '2019-09-11');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041904, 'Designer', '2019-09-11');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041904, 'Programmer', '2019-09-11');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041904, 'Tester', '2019-09-11');
-INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041905, 'PM', '2019-09-12', '2019-10-11');
-INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041906, 'PL', '2019-09-12', '2019-10-11');
-INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041907, 'Analyst', '2019-09-12', '2019-10-10');
-INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041908, 'Designer', '2019-09-12', '2019-10-10');
-INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041906, 'Programmer', '2019-09-12', '2019-10-10');
-INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041909, 'Programmer', '2019-09-12', '2019-10-10');
-INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041909, 'Tester', '2019-09-12', '2019-10-10');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041906, 'PM', '2019-10-12');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041905, 'PL', '2019-10-12');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041907, 'Analyst', '2019-10-12');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041908, 'Designer', '2019-10-12');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041905, 'Programmer', '2019-10-12');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041909, 'Programmer', '2019-10-12');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041909, 'Tester', '2019-10-12');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041913, 'PM', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041914, 'PL', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041915, 'Analyst', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041916, 'Analyst', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041917, 'Designer', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041918, 'Designer', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041919, 'Programmer', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041920, 'Programmer', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041921, 'Programmer', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041922, 'Tester', '2019-11-16');
-INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041923, 'Tester', '2019-11-16');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041901, 'PM', '2019-10-01');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041902, 'PL', '2019-10-01');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041903, 'Analyst', '2019-10-02');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041904, 'Designer', '2019-10-03');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041904, 'Programmer', '2019-10-04');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192001, 40041904, 'Tester', '2019-10-05');
+
+INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041905, 'PM', '2019-10-03', '2019-10-11');
+INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041906, 'PL', '2019-10-03', '2019-10-11'); 
+INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041907, 'Analyst', '2019-10-04', '2019-10-10'); 
+INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041908, 'Designer', '2019-10-04', '2019-10-10'); 
+INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041906, 'Programmer', '2019-10-05', '2019-10-10');
+INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041909, 'Programmer', '2019-10-05', '2019-10-10'); 
+INSERT INTO team_members (proj_no, emp_no, role, join_date, out_date) VALUES (20192002, 40041909, 'Tester', '2019-10-05', '2019-10-10');
+
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041905, 'PM', '2019-10-05');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041906, 'PL', '2019-10-05');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041907, 'Analyst', '2019-10-05');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041908, 'Designer', '2019-10-05');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041905, 'Programmer', '2019-10-05');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041909, 'Programmer', '2019-10-05');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192003, 40041909, 'Tester', '2019-10-05');
+
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041913, 'PM', '2019-10-11');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041914, 'PL', '2019-10-11');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041915, 'Analyst', '2019-10-12');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041916, 'Designer', '2019-10-12');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041917, 'Programmer', '2019-10-12');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192004, 40041918, 'Programmer', '2019-10-12');
+
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192005, 40041919, 'PM', '2019-10-13');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192005, 40041920, 'PL', '2019-10-13');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192005, 40041921, 'Analyst', '2019-10-13');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192005, 40041922, 'Programmer', '2019-10-13');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192005, 40041923, 'Programmer', '2019-10-13');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192005, 40041924, 'Tester', '2019-10-13');
+
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192006, 40041919, 'PM', '2019-10-16');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192006, 40041920, 'PL', '2019-10-16');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192006, 40041921, 'Analyst', '2019-10-16');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192006, 40041922, 'Designer', '2019-10-16');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192006, 40041923, 'Programmer', '2019-10-16');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192006, 40041924, 'Tester', '2019-10-16');
+
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192007, 40041925, 'PM', '2019-10-21');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192007, 40041926, 'PL', '2019-10-21');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192007, 40041927, 'Analyst', '2019-10-21');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192007, 40041928, 'Designer', '2019-10-21');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192007, 40041929, 'Programmer', '2019-10-21');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192007, 40041930, 'Tester', '2019-10-21');
+
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192008, 40041931, 'PM', '2019-10-23');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192008, 40041932, 'PL', '2019-10-23');
+
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192009, 40041933, 'PM', '2019-10-25');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192009, 40041934, 'PL', '2019-10-25');
+
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192010, 40041935, 'PM', '2019-10-27');
+INSERT INTO team_members (proj_no, emp_no, role, join_date) VALUES (20192010, 40041936, 'PL', '2019-10-27');
+
 
 -- Evaluate each other in team
 INSERT INTO colleague_evaluations (to_id, from_id, performance_rating, performance_desc, communication_rating, communication_desc, completed)
@@ -232,6 +274,7 @@ INSERT INTO client_evaluations (to_id, performance_rating, performance_desc, com
 VALUES (11, 5, '실력도 좋고', 5, '말도 잘통하고', true);
 INSERT INTO client_evaluations (to_id, performance_rating, performance_desc, communication_rating, communication_desc, completed)
 VALUES (12, 3, '실력은 적당한데', 5, '말이 잘통함', true);
+
 
 -- END INPUT EXAMPLE DATA
 
