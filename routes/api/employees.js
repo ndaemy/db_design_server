@@ -24,18 +24,6 @@ router.post('/', (req, res, next) => {
   )
 })
 
-router.put('/', (req, res, next) => {
-  const { emp_no, emp_name, ssn, final_edu, enter_date, dept_no } = req.body
-  management.query(
-    'UPDATE employees SET emp_name=?, ssn=?, final_edu=?, enter_date=?, dept_no=? WHERE emp_no=?',
-    [emp_name, ssn, final_edu, enter_date, dept_no, emp_no],
-    (err, results, fields) => {
-      if (err) throw err
-      res.send(results)
-    }
-  )
-})
-
 router.get('/exec_pos', (req, res, next) => {
   management.query(
     'SELECT * FROM executives_position',
@@ -75,6 +63,19 @@ router.delete('/:emp_no', (req, res, next) => {
   management.query(
     'DELETE FROM employees WHERE emp_no=?',
     [emp_no],
+    (err, results, fields) => {
+      if (err) throw err
+      res.send(results)
+    }
+  )
+})
+
+router.put('/:emp_no', (req, res, next) => {
+  const { emp_no } = req.params
+  const { emp_name, ssn, final_edu, enter_date, dept_no } = req.body
+  management.query(
+    'UPDATE employees SET emp_name=?, ssn=?, final_edu=?, enter_date=?, dept_no=? WHERE emp_no=?',
+    [emp_name, ssn, final_edu, enter_date, dept_no, emp_no],
     (err, results, fields) => {
       if (err) throw err
       res.send(results)

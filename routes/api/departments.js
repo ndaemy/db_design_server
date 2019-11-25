@@ -23,18 +23,6 @@ router.post('/', (req, res, next) => {
   )
 })
 
-router.put('/', (req, res, next) => {
-  const { dept_no, dept_name, budget } = req.body
-  management.query(
-    'UPDATE departments SET dept_name=?, budget=? WHERE dept_no=?',
-    [dept_name, budget, dept_no],
-    (err, results, fields) => {
-      if (err) throw err
-      res.send(results)
-    }
-  )
-})
-
 router.get('/:dept_no', (req, res, next) => {
   const { dept_no } = req.params
   management.query(
@@ -55,6 +43,19 @@ router.delete('/:dept_no', (req, res, next) => {
     (err, results, fields) => {
       if (err) throw err
       res.redirect('/api/departments')
+    }
+  )
+})
+
+router.put('/:dept_no', (req, res, next) => {
+  const { dept_no } = req.params
+  const { dept_name, budget } = req.body
+  management.query(
+    'UPDATE departments SET dept_name=?, budget=? WHERE dept_no=?',
+    [dept_name, budget, dept_no],
+    (err, results, fields) => {
+      if (err) throw err
+      res.send(results)
     }
   )
 })
