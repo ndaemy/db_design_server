@@ -3,6 +3,7 @@ import express from 'express'
 import clientRouter from './api/clients'
 import departmentRouter from './api/departments'
 import employeeRouter from './api/employees'
+import projectRouter from './api/projects'
 
 const router = express.Router()
 
@@ -13,5 +14,6 @@ router.get('/', function(req, res, next) {
 router.use('/api/clients', clientRouter)
 router.use('/api/departments', departmentRouter)
 router.use('/api/employees', employeeRouter)
+router.use('/api/projects', projectRouter)
 
 export default router
