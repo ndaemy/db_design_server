@@ -16,7 +16,7 @@
 - [x] Delete employee
 - [x] Connect executives employees to executives_position
 - [ ] Connect developer employees to developer_grade
-- [ ] Add new client
+- [x] Add new client
 - [x] See all client list
 - [x] See specific client
 - [ ] Add new project
