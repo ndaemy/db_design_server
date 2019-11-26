@@ -21,7 +21,8 @@
 - [x] See specific client
 - [x] Add new project
 - [x] See all project list
-- [ ] See specific project
+- [x] See specific project
+- [x] Modify project info
 - [ ] Allocate team members to project
 - [ ] Add evaluation
 - [ ] Modify evaluation
@@ -32,18 +33,18 @@
 
 - GET /api/departments
 - POST /api/departments
-- PUT /api/departments
 - GET /api/departments/:dept_no
+- PUT /api/departments/:dept_no
 - DELETE /api/departments/:dept_no
 
 ### employees
 
 - GET /api/employees
 - POST /api/employees
-- PUT /api/employees
 - GET /api/employees/exec_pos
 - POST /api/employees/exec_pos
 - GET /api/employees/:emp_no
+- PUT /api/employees/:emp_no
 - DELETE /api/employees/:emp_no
 
 ### clients
@@ -56,3 +57,5 @@
 
 - GET /api/projects
 - POST /api/projects
+- GET /api/projects/:proj_no
+- PUT /api/projects/:proj_no
