@@ -12,6 +12,7 @@
 - [x] Hire employee
 - [x] See all employee
 - [x] See specific employee
+- [x] Register employee online account
 - [x] Modify employee info
 - [x] Delete employee
 - [x] Connect executives employees to executives_position
@@ -43,6 +44,7 @@
 - POST /api/employees
 - GET /api/employees/exec_pos
 - POST /api/employees/exec_pos
+- PUT /api/employees/signup/:emp_no
 - GET /api/employees/:emp_no
 - PUT /api/employees/:emp_no
 - DELETE /api/employees/:emp_no

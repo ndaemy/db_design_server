@@ -46,6 +46,19 @@ router.post('/exec_pos', (req, res, next) => {
   )
 })
 
+router.put('/signup/:emp_no', (req, res, next) => {
+  const { emp_no } = req.params
+  const { id, password } = req.body
+  management.query(
+    'UPDATE employees SET account_id=?, account_pw=? WHERE emp_no=?',
+    [id, password, emp_no],
+    (err, results, fields) => {
+      if (err) throw err
+      res.send(results)
+    }
+  )
+})
+
 router.get('/:emp_no', (req, res, next) => {
   const { emp_no } = req.params
   management.query(
