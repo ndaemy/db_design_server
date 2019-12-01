@@ -5,10 +5,14 @@ import management from '../../models/management'
 const router = express.Router()
 
 router.get('/', (req, res, next) => {
-  management.query('SELECT * FROM employees', (err, results, fields) => {
-    if (err) throw err
-    res.send(results)
-  })
+  management.query(
+    'SELECT e.emp_no, e.emp_name, e.ssn, e.final_edu, e.enter_date, \
+    d.dept_name FROM employees AS e, departments AS d WHERE e.dept_no=d.dept_no',
+    (err, results, fields) => {
+      if (err) throw err
+      res.send(results)
+    }
+  )
 })
 
 router.post('/', (req, res, next) => {
