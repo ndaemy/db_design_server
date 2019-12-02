@@ -165,8 +165,8 @@ INSERT INTO developer_grade (emp_no, tech_grade) VALUES (40041960, 'Diamond');
 
 -- client to have contracted with
 INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('케이엠에어', 'KMAir', '최완규');
-INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('글러브엔터테인먼트', 'Glove Ent.', '김기석');
 INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('애플', 'Apple', 'Tim Cook');
+INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('글러브엔터테인먼트', 'Glove Ent.', '김기석');
 INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('삼성전자', 'Samsung Electronics.', '김기남');
 INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('엘지전자', 'LG Electronics', '조성진');
 INSERT INTO clients (cli_name_ko, cli_name_en, representative) VALUES ('구글', 'Google', 'Sundar Pichai');
