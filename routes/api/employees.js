@@ -6,7 +6,8 @@ const router = express.Router()
 
 router.get('/', (req, res, next) => {
   management.query(
-    'SELECT e.emp_no, e.emp_name, e.ssn, e.final_edu, e.enter_date, \
+    'SELECT e.emp_no, e.emp_name, e.ssn, e.final_edu, \
+    DATE_FORMAT(e.enter_date, "%Y-%m-%d") AS enter_date, \
     d.dept_name FROM employees AS e, departments AS d WHERE e.dept_no=d.dept_no',
     (err, results, fields) => {
       if (err) throw err
