@@ -5,10 +5,13 @@ import management from '../../models/management'
 const router = express.Router()
 
 router.get('/', (req, res, next) => {
+  const department = req.query.dept
+  let appendQuery = department ? `AND e.dept_no=${department}` : ''
+
   management.query(
-    'SELECT e.emp_no, e.emp_name, e.ssn, e.final_edu, \
+    `SELECT e.emp_no, e.emp_name, e.ssn, e.final_edu, \
     DATE_FORMAT(e.enter_date, "%Y-%m-%d") AS enter_date, \
-    d.dept_name FROM employees AS e, departments AS d WHERE e.dept_no=d.dept_no',
+    d.dept_name FROM employees AS e, departments AS d WHERE e.dept_no=d.dept_no ${appendQuery}`,
     (err, results, fields) => {
       if (err) throw err
       res.send(results)
