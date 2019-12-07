@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 
   management.query(
     `SELECT e.emp_no, e.emp_name, e.ssn, e.final_edu, \
-    DATE_FORMAT(e.enter_date, "%Y-%m-%d") AS enter_date, \
+    DATE_FORMAT(e.enter_date, '%Y-%m-%d') AS enter_date, \
     d.dept_name FROM employees AS e, departments AS d WHERE e.dept_no=d.dept_no ${appendQuery}`,
     (err, results, fields) => {
       if (err) throw err
@@ -56,10 +56,10 @@ router.post('/exec_pos', (req, res, next) => {
 
 router.get('/tech_grade', (req, res, next) => {
   management.query(
-    'SELECT e.emp_no, emp_name, ssn, final_edu, \
-    DATE_FORMAT(e.enter_date, "%Y-%m-%d") AS enter_date, \
+    "SELECT e.emp_no, emp_name, ssn, final_edu, \
+    DATE_FORMAT(e.enter_date, '%Y-%m-%d') AS enter_date, \
     dept_name, tech_grade FROM employees AS e, departments AS d, \
-    developer_grade AS t WHERE e.emp_no=t.emp_no AND e.dept_no=d.dept_no',
+    developer_grade AS t WHERE e.emp_no=t.emp_no AND e.dept_no=d.dept_no",
     (err, results, fields) => {
       if (err) throw err
       res.send(results)
