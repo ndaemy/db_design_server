@@ -24,7 +24,7 @@
 - [x] See all project list
 - [x] See specific project
 - [x] Modify project info
-- [ ] Allocate team members to project
+- [x] Allocate team members to project
 - [ ] Add evaluation
 - [ ] Modify evaluation
 
@@ -41,6 +41,7 @@
 ### employees
 
 - GET /api/employees
+  - QueryString: dept_no
 - POST /api/employees
 - GET /api/employees/exec_pos
 - POST /api/employees/exec_pos
@@ -61,3 +62,8 @@
 - POST /api/projects
 - GET /api/projects/:proj_no
 - PUT /api/projects/:proj_no
+
+## team_members
+
+- GET /api/team_members/:proj_no
+- POST /api/team_members/:proj_no
